@@ -1,0 +1,21 @@
+#day 1 challenge
+  '''
+  problem 1:
+Given an unsorted array arr. Find the count of elements less than or equal to the given element x.
+ex:
+Input: x = 9, arr = [10, 1, 2, 8, 4, 5] 
+Output: 5
+Explanation: The 5 elements are 1, 2, 8, 4 and 5
+  '''
+class solution():
+  def array_elements(self,arr):
+      count=0
+      for i in arr:
+          if i<=x:
+              count+=1
+      return count
+arr=[1,2,3,4,9,5,7]
+x=8
+print(solution().array_elements(arr))
+
+#output: 6
