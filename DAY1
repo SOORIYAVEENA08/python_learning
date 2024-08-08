@@ -35,7 +35,7 @@ Rotate by 2: [-3, 4, 5, 6, 7, -1, -2]
 Note: Make changes in the same arr do not use temp arr
 '''
 
-3solution:
+#solution:
 
 class solution():
     def rotating_array(self,arr,d):
