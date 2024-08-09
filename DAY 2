@@ -1,0 +1,40 @@
+'''
+problem 1:
+You are given an integer array arr[]. The task is to find the sum of it.
+ex:
+Input: arr[] = [1, 2, 3, 4]
+Output: 10
+Explanation: 1 + 2 + 3 + 4 = 10.
+'''
+#solution
+class solution():
+    def sumarray(self,arr):
+        sum=0
+        for i in arr:
+            sum+=i
+        return sum
+arr=[1,2,3,4,5]
+print(solution().sumarray(arr))
+
+
+# output: 15
+
+'''
+Given an array arr, print all its elements space-separated.
+Note: You don't need to move to the next line after printing all elements of the array (space-separated)
+ex:
+Input: arr[] = [1, 2, 3, 4, 5]
+Output: 1 2 3 4 5
+
+'''
+# solution
+
+class solution():
+    def elements_array(self,arr):
+        for i in arr:
+            print(i,end=" ")
+arr=[1,2,3,4,5]
+solution().elements_array(arr)
+
+#output : 1 2 3 4 5
+
