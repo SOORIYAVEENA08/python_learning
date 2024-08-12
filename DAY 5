@@ -1,0 +1,44 @@
+# DAY 5
+
+'''
+Given a non null integer matrix Grid of dimensions NxM.Calculate the sum of its elements.
+Example 1:
+Input:
+N=2,M=3
+Grid=
+[[1,0,1],
+[-8,9,-2]]
+Output:
+1
+Explanation:
+The sum of all elements of the matrix is 
+(1+0+1-8+9-2)=1.
+
+'''
+#solution :
+#method 1
+class solution():
+    def sumarray(self,arr):
+        sum=0
+        for i in arr:
+            for j in i:
+                sum=sum+j
+        return sum
+arr=[[1,2,3],[4,5,6]]
+print(solution().sumarray(arr))
+
+# output: 21
+
+
+#method 2 :using  numpy library - which used for working with arrays
+
+import numpy as np
+class solution():
+    def sumarray(self,arr):
+        sum=np.sum(arr)
+        return sum
+arr=[[1,2,3],[4,5,6]]
+print(solution().sumarray(arr))
+
+'''
+#output :21
