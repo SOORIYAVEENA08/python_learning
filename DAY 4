@@ -1,0 +1,23 @@
+# day 4
+'''
+Given a string S and two integers L and R. Print the characters in the range L to R of the string.
+NOTE: Assume zero based indexing.
+Ex: 
+Input: 
+S = "cdbkdub"
+L = 0 , R = 5
+Output: "cdbkdu" 
+Explanation: Starting from index 0 ('c')
+to index 5 ('u').
+
+#solution
+
+class solution():
+    def string_concat(self,s):
+            print(s[l:r+1])
+s="cdbkdub"
+l=0
+r=5
+solution().string_concat(s)
+
+#output :cdbkdu
