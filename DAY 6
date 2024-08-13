@@ -1,0 +1,27 @@
+# DAY 6
+'''
+problem 1:
+Given a string S which consists of alphabets , numbers and special characters. You need to write a program to split the strings in three different strings S1,
+S2 and S3 such that the string S1 will contain all the alphabets present in S , the string S2 will contain all the numbers present in S and S3 will contain all 
+special characters present in S.  The strings S1, S2 and S3 should have characters in same order as they appear in input.
+''''
+#SOLUTION
+
+
+class solution():
+    def string_split(self,s):
+        for i in s:
+            if i.isdigit():
+                integer.append(i)
+            elif i.isalpha():
+                str.append(i)
+            else:
+                special.append(i)
+        return integer,str,special
+s="hello12345!@#$%geek"
+integer=[]
+str=[]
+special=[]
+print(solution().string_split(s))
+
+# Output:(['1', '2', '3', '4', '5'], ['h', 'e', 'l', 'l', 'o', 'g', 'e', 'e', 'k'], ['!', '@', '#', '$', '%'])
