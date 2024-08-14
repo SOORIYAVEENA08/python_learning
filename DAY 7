@@ -1,0 +1,38 @@
+# DAY 7
+'''
+Given a English alphabet c, Write a program to check whether a character is a vowel or not.
+
+EXPLANATION
+example 1:
+Input:
+c = 'a'
+Output:
+YES
+Explanation:
+'a' is a vowel.
+
+example 2:
+Input:
+c = 'Z'
+Output:
+NO
+Explanation:
+'Z' is not a vowel.
+
+#solution:
+
+class Solution:
+    def isVowel (ob,c):
+        # code here 
+        vowels='AEIOUaeiou'
+        for i in vowels:
+            if c==i:
+                g='YES'
+                break
+            else:
+                g='NO'
+        return g
+c='d'
+print(Solution.isVowel(c))
+
+#output : NO
