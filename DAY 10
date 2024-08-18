@@ -1,0 +1,65 @@
+# DAY 10
+'''
+Find the largest pair sum in an array of distinct integers.
+
+Examples :
+
+Input: arr[] = [12, 34, 10, 6, 40]
+Output: 74
+Explanation: Sum of 34 and 40 is the largest,i.e, 34+40=74.
+Input: arr[] = [10, 20, 30]
+Output: 50
+Explanation: 20+30=50.
+Expected Time Complexity: O(n)
+Expected Auxiliary Space: O(1)
+
+Constraints:
+2 ≤ arr.size() ≤ 106
+0 ≤ arr[i] ≤ 106
+'''
+
+#SOLUTION:
+
+from typing import List
+
+
+class Solution:
+    def pairsum(self, arr : List[int]) -> int:
+        # code here
+        sum=0
+        arr.sort()
+        #print(arr)
+        sum=arr[-1]+arr[-2] #using negative indexing to achieve the desired elements 
+        return sum
+
+if __name__ == "__main__":
+    # Create an instance of the Solution class
+    solution = Solution()
+
+    # Test case 1
+    arr1 = [1, 2, 3, 4, 5]
+    result1 = solution.pairsum(arr1)
+    print(result1)  # Expected output: 9
+
+    # Test case 2
+    arr2 = [10, 20, 30, 40, 50]
+    result2 = solution.pairsum(arr2)
+    print(result2)  # Expected output: 90
+
+    # Test case 3
+    arr3 = [100, 200, 300, 400, 500]
+    result3 = solution.pairsum(arr3)
+    print(result3)  # Expected output: 900
+
+    # Test case 4
+    arr4 = [5, 1, 9, 6, 8]
+    result4 = solution.pairsum(arr4)
+    print(result4)  # Expected output: 17
+
+
+#output
+
+9
+90
+900
+17
