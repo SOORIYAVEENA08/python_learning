@@ -1,0 +1,54 @@
+#DAY 11
+'''
+Given a number, reverse it and add it to itself unless it becomes a palindrome or return -1 if the number of iterations becomes more than 5. Return that palindrome number if it becomes a palindrome else returns -1.
+
+Examples :
+
+Input: n = 23
+Output: 55 
+Explanation: reverse(23) = 32,then 32+23 = 55 which is a palindrome. 
+Input: n = 73
+Output: 121
+Explanation: reverse(73) = 37,then 37+73 = 110 which is not a palindrome, again reverse(110)= 011, then 110+11 = 121 which is a palindrome.
+Expected Time Complexity: O(n)
+Expected Auxiliary Space: O(1)
+'''
+#solution
+class Solution:
+    def isSumPalindrome (self, n):
+        if self.ispalindrome(n):
+            return n
+        else:
+            i=0
+            while i<5:
+                str_n=str(n)
+                rev=int(str_n[::-1])
+                n=n+rev
+                if self.ispalindrome(n):
+                    return n
+                else:
+                    i+=1
+            return "-1"
+    def ispalindrome(self,s):
+        str_s=str(s)
+        rev=str_s[::-1]
+        if str_s==rev:
+            return True
+        return False
+f __name__ == "__main__":
+    sol = Solution()
+
+    # Test cases
+    test_cases = [123, 56, 678, 87, 999, 99]
+    
+    for n in test_cases:
+        result = sol.isSumPalindrome(n)
+        print(result)
+
+#output
+444
+121
+23232
+4884
+999
+99
